@@ -14,7 +14,7 @@ See also: https://github.com/MrDroid/pam_imap
 Compiling
 ---------
 
-Install prerequisites: libpam0g-dev libssl-dev libgdbm-dev
+Install prerequisites: libpam0g-dev libssl-dev libgdbm-dev dh-autoreconf
 
 .. code-block:: console
 
