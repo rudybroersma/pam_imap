@@ -22,7 +22,6 @@ int main (int argc, char *argv[])
 	global.box = "INBOX";
 	global.folder = "";
 	global.require_ssl = 1;
-	global.use_tlsv1 = 1;
 	global.use_imaps = 1;
 	global.host = "localhost";
 	load_config(config, &o2o);

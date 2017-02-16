@@ -497,7 +497,6 @@ int server_connect(int server_number)
 		global.require_ssl = 1;
 		global.use_sslv2 = 1;
 		global.use_sslv3 = 1;
-		global.use_tlsv1 = 1;
 		strtok(temp_server, ":");
 		/* get the hostname */
 		buffer = strtok(NULL, ":");
@@ -530,7 +529,6 @@ int server_connect(int server_number)
 	printf("use_imaps=%d\n", global.use_imaps);
 	printf("use_sslv2=%d\n", global.use_sslv2);
 	printf("use_sslv3=%d\n", global.use_sslv3);
-	printf("use_tlsv1=%d\n", global.use_tlsv1);
 	printf("cert_file=%s\n", global.cert_file);
 	printf("user=%s\n", global.user);
 	printf("********************************\n");

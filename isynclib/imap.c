@@ -139,10 +139,8 @@ init_ssl (config_t * conf)
     }
     SSL_load_error_strings ();
     SSL_library_init ();
-    if (conf->use_tlsv1 && !conf->use_sslv2 && !conf->use_sslv3)
-	method = TLSv1_client_method ();
-    else
-	method = SSLv23_client_method ();
+ 
+    method = SSLv23_client_method ();
 
     SSLContext = SSL_CTX_new (method);
 
@@ -169,8 +167,6 @@ init_ssl (config_t * conf)
 	options |= SSL_OP_NO_SSLv2;
     if (!conf->use_sslv3)
 	options |= SSL_OP_NO_SSLv3;
-    if (!conf->use_tlsv1)
-	options |= SSL_OP_NO_TLSv1;
 
     SSL_CTX_set_options (SSLContext, options);
 
@@ -795,7 +791,7 @@ imap_connect (config_t * cfg)
 #if HAVE_LIBSSL
       if (!cfg->use_imaps)
       {
-	if (cfg->use_sslv2 || cfg->use_sslv3 || cfg->use_tlsv1)
+	if (cfg->use_sslv2 || cfg->use_sslv3)
 	{
 	  /* always try to select SSL support if available */
 	  if (imap->have_starttls)

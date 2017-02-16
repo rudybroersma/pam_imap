@@ -86,7 +86,6 @@ struct config
     unsigned int require_ssl:1;
     unsigned int use_sslv2:1;
     unsigned int use_sslv3:1;
-    unsigned int use_tlsv1:1;
     unsigned int require_cram:1;
 #endif
     unsigned int use_namespace:1;

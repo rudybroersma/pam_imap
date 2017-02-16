@@ -249,8 +249,6 @@ load_config (const char *where, int *o2o)
 	    cfg->use_sslv2 = is_true (val);
 	else if (!strcasecmp ("UseSSLv3", cmd))
 	    cfg->use_sslv3 = is_true (val);
-	else if (!strcasecmp ("UseTLSv1", cmd))
-	    cfg->use_tlsv1 = is_true (val);
 	else if (!strcasecmp ("RequireCRAM", cmd))
 	    cfg->require_cram = is_true (val);
 #endif
